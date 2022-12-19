@@ -1,0 +1,12 @@
+import discord
+
+intents = discord.Intents.all()
+
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_message(message):
+    if message.content == '/hi':
+        await message.channel.send('siuuuu')
+
+client.run('discord_bot_token')
